@@ -5,6 +5,75 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>52D5645F-1FC4-48B6-A58B-969E749189D8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>52D5645F-1FC4-48B6-A58B-969E749189D8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CrewOptimizer project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CrewOptimizer</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run CrewOptimizer</string>
+			<key>timeStartedRecording</key>
+			<real>662307013.25497901</real>
+			<key>timeStoppedRecording</key>
+			<real>662307061.13287306</real>
+			<key>title</key>
+			<string>Run CrewOptimizer</string>
+			<key>uniqueIdentifier</key>
+			<string>52D5645F-1FC4-48B6-A58B-969E749189D8</string>
+		</dict>
+		<key>811565CE-8020-4375-B7F6-446FC1853ECD</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>811565CE-8020-4375-B7F6-446FC1853ECD.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CrewOptimizer project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CrewOptimizer</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run CrewOptimizer</string>
+			<key>timeStartedRecording</key>
+			<real>660845568.71365201</real>
+			<key>timeStoppedRecording</key>
+			<real>660845572.41699505</real>
+			<key>title</key>
+			<string>Run CrewOptimizer</string>
+			<key>uniqueIdentifier</key>
+			<string>811565CE-8020-4375-B7F6-446FC1853ECD</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

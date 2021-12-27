@@ -7,7 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		82010C45277879E800EBD01C /* IoController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82010C43277879E800EBD01C /* IoController.cpp */; };
+		822DFB8927799F41002D5FF4 /* libortools.9.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */; };
+		82BCC3522754B0F20058043D /* OptEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82BCC3502754B0F20058043D /* OptEngine.cpp */; };
 		82C7A4D02750AA30006F655E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4CF2750AA30006F655E /* main.cpp */; };
+		82C7A4D827511916006F655E /* Sector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4D627511916006F655E /* Sector.cpp */; };
+		82C7A4DE2751AD38006F655E /* Definition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4DC2751AD38006F655E /* Definition.cpp */; };
+		82C7A4E127528CF5006F655E /* Duty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4DF27528CF5006F655E /* Duty.cpp */; };
+		82C7A4E427528D8E006F655E /* Pairing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4E227528D8E006F655E /* Pairing.cpp */; };
+		82C7A4E72752957C006F655E /* Complement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4E52752957C006F655E /* Complement.cpp */; };
+		82C7A4F027533C25006F655E /* ConstraintBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4EE27533C25006F655E /* ConstraintBase.cpp */; };
+		82C7A4F327534329006F655E /* Constraints.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4F127534329006F655E /* Constraints.cpp */; };
+		82C7A4F6275357EF006F655E /* Solution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4F4275357EF006F655E /* Solution.cpp */; };
+		82D099F6275CF02300A1A424 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82D099F4275CF02300A1A424 /* Utility.cpp */; };
+		82D09A0127629B2500A1A424 /* libOsiClp.1.14.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FC27629B2400A1A424 /* libOsiClp.1.14.6.dylib */; };
+		82D09A0227629B2500A1A424 /* libOsiCommonTests.1.13.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FD27629B2400A1A424 /* libOsiCommonTests.1.13.6.dylib */; };
+		82D09A0327629B2500A1A424 /* libOsi.1.13.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FE27629B2400A1A424 /* libOsi.1.13.6.dylib */; };
+		82D09A0427629B2500A1A424 /* libOsiCbc.3.10.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FF27629B2500A1A424 /* libOsiCbc.3.10.5.dylib */; };
+		82D09A07276324D200A1A424 /* libfmt.8.0.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D09A05276324D200A1A424 /* libfmt.8.0.1.dylib */; };
+		82D09A08276324D200A1A424 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D09A06276324D200A1A424 /* libfmt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +41,39 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		82010C43277879E800EBD01C /* IoController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IoController.cpp; sourceTree = "<group>"; };
+		82010C44277879E800EBD01C /* IoController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IoController.hpp; sourceTree = "<group>"; };
+		822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libortools.9.2.dylib; path = "../../../../usr/local/Cellar/or-tools/9.2_2/lib/libortools.9.2.dylib"; sourceTree = "<group>"; };
+		822DFB8B2779CD05002D5FF4 /* Parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Parser.hpp; sourceTree = "<group>"; };
+		82BCC3502754B0F20058043D /* OptEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OptEngine.cpp; sourceTree = "<group>"; };
+		82BCC3512754B0F20058043D /* OptEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OptEngine.hpp; sourceTree = "<group>"; };
 		82C7A4CC2750AA30006F655E /* CrewOptimizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CrewOptimizer; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C7A4CF2750AA30006F655E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		82C7A4D627511916006F655E /* Sector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sector.cpp; sourceTree = "<group>"; };
+		82C7A4D727511916006F655E /* Sector.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Sector.hpp; sourceTree = "<group>"; };
+		82C7A4DC2751AD38006F655E /* Definition.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Definition.cpp; sourceTree = "<group>"; };
+		82C7A4DD2751AD38006F655E /* Definition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Definition.hpp; sourceTree = "<group>"; };
+		82C7A4DF27528CF5006F655E /* Duty.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Duty.cpp; sourceTree = "<group>"; };
+		82C7A4E027528CF5006F655E /* Duty.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Duty.hpp; sourceTree = "<group>"; };
+		82C7A4E227528D8E006F655E /* Pairing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Pairing.cpp; sourceTree = "<group>"; };
+		82C7A4E327528D8E006F655E /* Pairing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Pairing.hpp; sourceTree = "<group>"; };
+		82C7A4E52752957C006F655E /* Complement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Complement.cpp; sourceTree = "<group>"; };
+		82C7A4E62752957C006F655E /* Complement.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complement.hpp; sourceTree = "<group>"; };
+		82C7A4EE27533C25006F655E /* ConstraintBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConstraintBase.cpp; sourceTree = "<group>"; };
+		82C7A4EF27533C25006F655E /* ConstraintBase.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConstraintBase.hpp; sourceTree = "<group>"; };
+		82C7A4F127534329006F655E /* Constraints.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Constraints.cpp; sourceTree = "<group>"; };
+		82C7A4F227534329006F655E /* Constraints.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Constraints.hpp; sourceTree = "<group>"; };
+		82C7A4F4275357EF006F655E /* Solution.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Solution.cpp; sourceTree = "<group>"; };
+		82C7A4F5275357EF006F655E /* Solution.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution.hpp; sourceTree = "<group>"; };
+		82D099F4275CF02300A1A424 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
+		82D099F5275CF02300A1A424 /* Utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
+		82D099FB27629B2400A1A424 /* libortools.9.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libortools.9.1.dylib; path = "../../../../usr/local/Cellar/or-tools/9.1/lib/libortools.9.1.dylib"; sourceTree = "<group>"; };
+		82D099FC27629B2400A1A424 /* libOsiClp.1.14.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOsiClp.1.14.6.dylib; path = ../../../../usr/local/Cellar/clp/1.17.6_1/lib/libOsiClp.1.14.6.dylib; sourceTree = "<group>"; };
+		82D099FD27629B2400A1A424 /* libOsiCommonTests.1.13.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOsiCommonTests.1.13.6.dylib; path = ../../../../usr/local/Cellar/osi/0.108.6/lib/libOsiCommonTests.1.13.6.dylib; sourceTree = "<group>"; };
+		82D099FE27629B2400A1A424 /* libOsi.1.13.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOsi.1.13.6.dylib; path = ../../../../usr/local/Cellar/osi/0.108.6/lib/libOsi.1.13.6.dylib; sourceTree = "<group>"; };
+		82D099FF27629B2500A1A424 /* libOsiCbc.3.10.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOsiCbc.3.10.5.dylib; path = ../../../../usr/local/Cellar/cbc/2.10.5/lib/libOsiCbc.3.10.5.dylib; sourceTree = "<group>"; };
+		82D09A05276324D200A1A424 /* libfmt.8.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfmt.8.0.1.dylib; path = ../../../../usr/local/Cellar/fmt/8.0.1/lib/libfmt.8.0.1.dylib; sourceTree = "<group>"; };
+		82D09A06276324D200A1A424 /* libfmt.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfmt.a; path = ../../../../usr/local/Cellar/fmt/8.0.1/lib/libfmt.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +81,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				822DFB8927799F41002D5FF4 /* libortools.9.2.dylib in Frameworks */,
+				82D09A07276324D200A1A424 /* libfmt.8.0.1.dylib in Frameworks */,
+				82D09A08276324D200A1A424 /* libfmt.a in Frameworks */,
+				82D09A0127629B2500A1A424 /* libOsiClp.1.14.6.dylib in Frameworks */,
+				82D09A0227629B2500A1A424 /* libOsiCommonTests.1.13.6.dylib in Frameworks */,
+				82D09A0327629B2500A1A424 /* libOsi.1.13.6.dylib in Frameworks */,
+				82D09A0427629B2500A1A424 /* libOsiCbc.3.10.5.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +99,7 @@
 			children = (
 				82C7A4CE2750AA30006F655E /* CrewOptimizer */,
 				82C7A4CD2750AA30006F655E /* Products */,
+				82D099FA27629B2400A1A424 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +115,46 @@
 			isa = PBXGroup;
 			children = (
 				82C7A4CF2750AA30006F655E /* main.cpp */,
+				82C7A4D627511916006F655E /* Sector.cpp */,
+				82C7A4D727511916006F655E /* Sector.hpp */,
+				82C7A4E52752957C006F655E /* Complement.cpp */,
+				82C7A4E62752957C006F655E /* Complement.hpp */,
+				82C7A4DF27528CF5006F655E /* Duty.cpp */,
+				82C7A4E027528CF5006F655E /* Duty.hpp */,
+				82C7A4E227528D8E006F655E /* Pairing.cpp */,
+				82C7A4E327528D8E006F655E /* Pairing.hpp */,
+				82C7A4DC2751AD38006F655E /* Definition.cpp */,
+				82C7A4DD2751AD38006F655E /* Definition.hpp */,
+				82C7A4EE27533C25006F655E /* ConstraintBase.cpp */,
+				82C7A4EF27533C25006F655E /* ConstraintBase.hpp */,
+				82C7A4F127534329006F655E /* Constraints.cpp */,
+				82C7A4F227534329006F655E /* Constraints.hpp */,
+				82C7A4F4275357EF006F655E /* Solution.cpp */,
+				82C7A4F5275357EF006F655E /* Solution.hpp */,
+				82BCC3502754B0F20058043D /* OptEngine.cpp */,
+				82BCC3512754B0F20058043D /* OptEngine.hpp */,
+				82D099F4275CF02300A1A424 /* Utility.cpp */,
+				82D099F5275CF02300A1A424 /* Utility.hpp */,
+				822DFB8B2779CD05002D5FF4 /* Parser.hpp */,
+				82010C43277879E800EBD01C /* IoController.cpp */,
+				82010C44277879E800EBD01C /* IoController.hpp */,
 			);
 			path = CrewOptimizer;
+			sourceTree = "<group>";
+		};
+		82D099FA27629B2400A1A424 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */,
+				82D09A05276324D200A1A424 /* libfmt.8.0.1.dylib */,
+				82D09A06276324D200A1A424 /* libfmt.a */,
+				82D099FB27629B2400A1A424 /* libortools.9.1.dylib */,
+				82D099FE27629B2400A1A424 /* libOsi.1.13.6.dylib */,
+				82D099FF27629B2500A1A424 /* libOsiCbc.3.10.5.dylib */,
+				82D099FC27629B2400A1A424 /* libOsiClp.1.14.6.dylib */,
+				82D099FD27629B2400A1A424 /* libOsiCommonTests.1.13.6.dylib */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +214,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82D099F6275CF02300A1A424 /* Utility.cpp in Sources */,
+				82C7A4F6275357EF006F655E /* Solution.cpp in Sources */,
+				82C7A4DE2751AD38006F655E /* Definition.cpp in Sources */,
+				82C7A4E427528D8E006F655E /* Pairing.cpp in Sources */,
 				82C7A4D02750AA30006F655E /* main.cpp in Sources */,
+				82C7A4D827511916006F655E /* Sector.cpp in Sources */,
+				82010C45277879E800EBD01C /* IoController.cpp in Sources */,
+				82C7A4E127528CF5006F655E /* Duty.cpp in Sources */,
+				82C7A4F327534329006F655E /* Constraints.cpp in Sources */,
+				82C7A4F027533C25006F655E /* ConstraintBase.cpp in Sources */,
+				82C7A4E72752957C006F655E /* Complement.cpp in Sources */,
+				82BCC3522754B0F20058043D /* OptEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,9 +236,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -177,6 +287,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -189,9 +301,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -230,6 +346,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -240,7 +358,21 @@
 		82C7A4D42750AA30006F655E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/usr/local/Cellar/or-tools/9.1/lib",
+					/usr/local/Cellar/clp/1.17.6_1/lib,
+					/usr/local/Cellar/osi/0.108.6/lib,
+					/usr/local/Cellar/cbc/2.10.5/lib,
+					/usr/local/Cellar/fmt/8.0.1/lib,
+					"/usr/local/Cellar/or-tools/9.2_2/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -248,7 +380,22 @@
 		82C7A4D52750AA30006F655E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					x86_64,
+				);
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CODE_SIGN_STYLE = Automatic;
+				GCC_OPTIMIZATION_LEVEL = fast;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/usr/local/Cellar/or-tools/9.1/lib",
+					/usr/local/Cellar/clp/1.17.6_1/lib,
+					/usr/local/Cellar/osi/0.108.6/lib,
+					/usr/local/Cellar/cbc/2.10.5/lib,
+					/usr/local/Cellar/fmt/8.0.1/lib,
+					"/usr/local/Cellar/or-tools/9.2_2/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
