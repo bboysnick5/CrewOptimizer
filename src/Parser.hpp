@@ -27,7 +27,6 @@
 #include <vector>
 
 #include <date/date.h>
-#include <fmt/format.h>
 #include <magic_enum.hpp>
 
 #include "Definition.hpp"
@@ -60,10 +59,16 @@ private:
     static ReturnType ParseFieldSv(ser::SecField field_enum, std::string_view field_sv);
     
     template<typename ReturnType, std::enable_if_t<util::is_chrono_time_point_v<std::chrono::system_clock> ||
-                                                   util::is_chrono_duration_v<typename ReturnType::rep, typename ReturnType::period>,
+                                                   (util::is_chrono_duration_v<typename ReturnType::rep,
+                                                                               typename ReturnType::period> &&
+                                                    !std::is_same_v<ReturnType, gen::DurationDays>),
                                                    bool> = true>
     static ReturnType ParseFieldSv(ser::SecField field_enum, std::string_view field_sv);
     
+    // patch for pre C++ 20 chrono lib compiler. Can be substitude with chrono::parse and format %Q
+    // once C++ 20 chrono lands.
+    template<typename ReturnType, std::enable_if_t<std::is_same_v<ReturnType, gen::DurationDays>, bool> = true>
+    static ReturnType ParseFieldSv(ser::SecField field_enum, std::string_view field_sv);
     
     // Data field
     std::string_view line_sv_;
@@ -108,16 +113,23 @@ inline ReturnType Parser::ParseFieldSv(ser::SecField field_enum, std::string_vie
     return impl_integer;
 }
 
-template<typename ReturnType, std::enable_if_t<util::is_chrono_time_point_v<std::chrono::system_clock>  ||
-                                               util::is_chrono_duration_v<typename ReturnType::rep, typename ReturnType::period>,
+template<typename ReturnType, std::enable_if_t<util::is_chrono_time_point_v<std::chrono::system_clock> ||
+                                               (util::is_chrono_duration_v<typename ReturnType::rep,
+                                                                           typename ReturnType::period> &&
+                                                !std::is_same_v<ReturnType, gen::DurationDays>),
                                                bool>>
 inline ReturnType Parser::ParseFieldSv(ser::SecField field_enum, std::string_view field_sv) {
-    ReturnType tp_duration;
+    ReturnType tp;
     std::stringstream field_ss(std::string(field_sv), std::ios_base::in);
-    bool is_consistent = bool(field_ss >> date::parse(std::string(ser::SecFieldStrFormatMap[util::to_underlying(field_enum)].str_chrono_format),
-                                                      tp_duration));
+    bool is_consistent = bool(field_ss >> date::parse(std::string(
+                         ser::SecFieldStrFormatMap[util::to_underlying(field_enum)].str_chrono_format), tp));
     CheckAndAbortForBadInput(field_enum, is_consistent);
-    return tp_duration;
+    return tp;
+}
+
+template<typename ReturnType, std::enable_if_t<std::is_same_v<ReturnType, gen::DurationDays>, bool>>
+inline ReturnType Parser::ParseFieldSv(ser::SecField field_enum, std::string_view field_sv) {
+    return gen::DurationDays(std::stoul(std::string(field_sv)));
 }
 
 
@@ -125,12 +137,12 @@ inline void Parser::CheckAndAbortForBadInput(ser::SecField field_enum, bool is_c
     if (!is_consistent) {
         std::cerr << "Field " << magic_enum::enum_name(field_enum)
                   << " is not consistent between file format and implementation.\n";
-        std::abort();
+        std::exit(EXIT_FAILURE);
     }
 }
 
 inline std::string_view Parser::SubSvFromField(ser::SecField field_enum) const {
-    const auto[start_idx, count, ignore0, ignore1] = ser::SecFieldStrFormatMap[util::to_underlying(field_enum)];
+    const auto[start_idx, count, ignore0] = ser::SecFieldStrFormatMap[util::to_underlying(field_enum)];
     return line_sv_.substr(start_idx, count);
 }
 

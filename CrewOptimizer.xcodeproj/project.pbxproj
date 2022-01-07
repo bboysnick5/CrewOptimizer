@@ -8,8 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		82010C45277879E800EBD01C /* IoController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82010C43277879E800EBD01C /* IoController.cpp */; };
-		822DFB8927799F41002D5FF4 /* libortools.9.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */; };
 		82BCC3522754B0F20058043D /* OptEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82BCC3502754B0F20058043D /* OptEngine.cpp */; };
+		82C22BFE2784188C00703BB2 /* libfmt.8.0.1.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 82D09A05276324D200A1A424 /* libfmt.8.0.1.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		82C22C04278418B000703BB2 /* libortools.9.2.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		82C22C06278418B000703BB2 /* libortools.9.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */; };
+		82C22C08278418B000703BB2 /* libOsi.1.13.6.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 82D099FE27629B2400A1A424 /* libOsi.1.13.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		82C22C0A278418B000703BB2 /* libOsi.1.13.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FE27629B2400A1A424 /* libOsi.1.13.6.dylib */; };
+		82C22C0C278418B000703BB2 /* libOsiCbc.3.10.5.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 82D099FF27629B2500A1A424 /* libOsiCbc.3.10.5.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		82C22C0E278418B000703BB2 /* libOsiCbc.3.10.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FF27629B2500A1A424 /* libOsiCbc.3.10.5.dylib */; };
+		82C22C10278418B000703BB2 /* libOsiClp.1.14.6.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 82D099FC27629B2400A1A424 /* libOsiClp.1.14.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		82C22C11278418B000703BB2 /* libOsiClp.1.14.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FC27629B2400A1A424 /* libOsiClp.1.14.6.dylib */; };
+		82C22C13278418B100703BB2 /* libOsiCommonTests.1.13.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FD27629B2400A1A424 /* libOsiCommonTests.1.13.6.dylib */; };
+		82C22C14278418B100703BB2 /* libOsiCommonTests.1.13.6.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 82D099FD27629B2400A1A424 /* libOsiCommonTests.1.13.6.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		82C22C8827872E6C00703BB2 /* TestUtility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C22C1B2786C1AE00703BB2 /* TestUtility.cpp */; };
+		82C22C8927872E6C00703BB2 /* TestDefinition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C22C192786B1F200703BB2 /* TestDefinition.cpp */; };
+		82C22C8D2787374E00703BB2 /* IoTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C22C8B2787374E00703BB2 /* IoTest.cpp */; };
+		82C22C8E27873E5D00703BB2 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C22C1F2786C58E00703BB2 /* libgtest.a */; };
+		82C22C8F27873E5D00703BB2 /* libgtest_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82C22C1D2786C51700703BB2 /* libgtest_main.a */; };
+		82C22C902787423200703BB2 /* Sector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4D627511916006F655E /* Sector.cpp */; };
+		82C22C912787425600703BB2 /* Complement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4E52752957C006F655E /* Complement.cpp */; };
+		82C22C922787425600703BB2 /* Pairing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4E227528D8E006F655E /* Pairing.cpp */; };
+		82C22C932787425600703BB2 /* Duty.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4DF27528CF5006F655E /* Duty.cpp */; };
+		82C22C942787425600703BB2 /* Solution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4F4275357EF006F655E /* Solution.cpp */; };
+		82C22C952787425600703BB2 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82D099F4275CF02300A1A424 /* Utility.cpp */; };
+		82C22C962787425600703BB2 /* ConstraintBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4EE27533C25006F655E /* ConstraintBase.cpp */; };
+		82C22C972787425600703BB2 /* OptEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82BCC3502754B0F20058043D /* OptEngine.cpp */; };
+		82C22C982787425600703BB2 /* IoController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82010C43277879E800EBD01C /* IoController.cpp */; };
+		82C22C992787425600703BB2 /* Definition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4DC2751AD38006F655E /* Definition.cpp */; };
+		82C22C9A2787425600703BB2 /* Constraints.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4F127534329006F655E /* Constraints.cpp */; };
 		82C7A4D02750AA30006F655E /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4CF2750AA30006F655E /* main.cpp */; };
 		82C7A4D827511916006F655E /* Sector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4D627511916006F655E /* Sector.cpp */; };
 		82C7A4DE2751AD38006F655E /* Definition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4DC2751AD38006F655E /* Definition.cpp */; };
@@ -20,15 +46,34 @@
 		82C7A4F327534329006F655E /* Constraints.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4F127534329006F655E /* Constraints.cpp */; };
 		82C7A4F6275357EF006F655E /* Solution.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C7A4F4275357EF006F655E /* Solution.cpp */; };
 		82D099F6275CF02300A1A424 /* Utility.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82D099F4275CF02300A1A424 /* Utility.cpp */; };
-		82D09A0127629B2500A1A424 /* libOsiClp.1.14.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FC27629B2400A1A424 /* libOsiClp.1.14.6.dylib */; };
-		82D09A0227629B2500A1A424 /* libOsiCommonTests.1.13.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FD27629B2400A1A424 /* libOsiCommonTests.1.13.6.dylib */; };
-		82D09A0327629B2500A1A424 /* libOsi.1.13.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FE27629B2400A1A424 /* libOsi.1.13.6.dylib */; };
-		82D09A0427629B2500A1A424 /* libOsiCbc.3.10.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D099FF27629B2500A1A424 /* libOsiCbc.3.10.5.dylib */; };
-		82D09A07276324D200A1A424 /* libfmt.8.0.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D09A05276324D200A1A424 /* libfmt.8.0.1.dylib */; };
-		82D09A08276324D200A1A424 /* libfmt.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82D09A06276324D200A1A424 /* libfmt.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		82C22C022784188C00703BB2 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				82C22C04278418B000703BB2 /* libortools.9.2.dylib in Embed Libraries */,
+				82C22C0C278418B000703BB2 /* libOsiCbc.3.10.5.dylib in Embed Libraries */,
+				82C22BFE2784188C00703BB2 /* libfmt.8.0.1.dylib in Embed Libraries */,
+				82C22C10278418B000703BB2 /* libOsiClp.1.14.6.dylib in Embed Libraries */,
+				82C22C08278418B000703BB2 /* libOsi.1.13.6.dylib in Embed Libraries */,
+				82C22C14278418B100703BB2 /* libOsiCommonTests.1.13.6.dylib in Embed Libraries */,
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82C22C7F27872D4900703BB2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		82C7A4CA2750AA30006F655E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -47,6 +92,17 @@
 		822DFB8B2779CD05002D5FF4 /* Parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Parser.hpp; sourceTree = "<group>"; };
 		82BCC3502754B0F20058043D /* OptEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OptEngine.cpp; sourceTree = "<group>"; };
 		82BCC3512754B0F20058043D /* OptEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OptEngine.hpp; sourceTree = "<group>"; };
+		82C22C172785689800703BB2 /* ez.expand.segs.out.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = ez.expand.segs.out.correct; sourceTree = "<group>"; };
+		82C22C182785689900703BB2 /* ez.expand.segs */ = {isa = PBXFileReference; lastKnownFileType = text; path = ez.expand.segs; sourceTree = "<group>"; };
+		82C22C192786B1F200703BB2 /* TestDefinition.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestDefinition.cpp; sourceTree = "<group>"; };
+		82C22C1A2786B1F200703BB2 /* TestDefinition.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestDefinition.hpp; sourceTree = "<group>"; };
+		82C22C1B2786C1AE00703BB2 /* TestUtility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestUtility.cpp; sourceTree = "<group>"; };
+		82C22C1C2786C1AE00703BB2 /* TestUtility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestUtility.hpp; sourceTree = "<group>"; };
+		82C22C1D2786C51700703BB2 /* libgtest_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest_main.a; path = ../../../../usr/local/Cellar/googletest/1.11.0/lib/libgtest_main.a; sourceTree = "<group>"; };
+		82C22C1F2786C58E00703BB2 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = ../../../../usr/local/Cellar/googletest/1.11.0/lib/libgtest.a; sourceTree = "<group>"; };
+		82C22C8127872D4900703BB2 /* CrewOptimizerUnitTest */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CrewOptimizerUnitTest; sourceTree = BUILT_PRODUCTS_DIR; };
+		82C22C8B2787374E00703BB2 /* IoTest.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IoTest.cpp; sourceTree = "<group>"; };
+		82C22C8C2787374E00703BB2 /* IoTest.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IoTest.hpp; sourceTree = "<group>"; };
 		82C7A4CC2750AA30006F655E /* CrewOptimizer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CrewOptimizer; sourceTree = BUILT_PRODUCTS_DIR; };
 		82C7A4CF2750AA30006F655E /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		82C7A4D627511916006F655E /* Sector.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Sector.cpp; sourceTree = "<group>"; };
@@ -67,7 +123,6 @@
 		82C7A4F5275357EF006F655E /* Solution.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Solution.hpp; sourceTree = "<group>"; };
 		82D099F4275CF02300A1A424 /* Utility.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utility.cpp; sourceTree = "<group>"; };
 		82D099F5275CF02300A1A424 /* Utility.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utility.hpp; sourceTree = "<group>"; };
-		82D099FB27629B2400A1A424 /* libortools.9.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libortools.9.1.dylib; path = "../../../../usr/local/Cellar/or-tools/9.1/lib/libortools.9.1.dylib"; sourceTree = "<group>"; };
 		82D099FC27629B2400A1A424 /* libOsiClp.1.14.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOsiClp.1.14.6.dylib; path = ../../../../usr/local/Cellar/clp/1.17.6_1/lib/libOsiClp.1.14.6.dylib; sourceTree = "<group>"; };
 		82D099FD27629B2400A1A424 /* libOsiCommonTests.1.13.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOsiCommonTests.1.13.6.dylib; path = ../../../../usr/local/Cellar/osi/0.108.6/lib/libOsiCommonTests.1.13.6.dylib; sourceTree = "<group>"; };
 		82D099FE27629B2400A1A424 /* libOsi.1.13.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOsi.1.13.6.dylib; path = ../../../../usr/local/Cellar/osi/0.108.6/lib/libOsi.1.13.6.dylib; sourceTree = "<group>"; };
@@ -77,41 +132,40 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		82C22C7E27872D4900703BB2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C22C8E27873E5D00703BB2 /* libgtest.a in Frameworks */,
+				82C22C8F27873E5D00703BB2 /* libgtest_main.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82C7A4C92750AA30006F655E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				822DFB8927799F41002D5FF4 /* libortools.9.2.dylib in Frameworks */,
-				82D09A07276324D200A1A424 /* libfmt.8.0.1.dylib in Frameworks */,
-				82D09A08276324D200A1A424 /* libfmt.a in Frameworks */,
-				82D09A0127629B2500A1A424 /* libOsiClp.1.14.6.dylib in Frameworks */,
-				82D09A0227629B2500A1A424 /* libOsiCommonTests.1.13.6.dylib in Frameworks */,
-				82D09A0327629B2500A1A424 /* libOsi.1.13.6.dylib in Frameworks */,
-				82D09A0427629B2500A1A424 /* libOsiCbc.3.10.5.dylib in Frameworks */,
+				82C22C0E278418B000703BB2 /* libOsiCbc.3.10.5.dylib in Frameworks */,
+				82C22C06278418B000703BB2 /* libortools.9.2.dylib in Frameworks */,
+				82C22C11278418B000703BB2 /* libOsiClp.1.14.6.dylib in Frameworks */,
+				82C22C13278418B100703BB2 /* libOsiCommonTests.1.13.6.dylib in Frameworks */,
+				82C22C0A278418B000703BB2 /* libOsi.1.13.6.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		82C7A4C32750AA30006F655E = {
+		82C22BF3278297C700703BB2 /* data */ = {
 			isa = PBXGroup;
 			children = (
-				82C7A4CE2750AA30006F655E /* CrewOptimizer */,
-				82C7A4CD2750AA30006F655E /* Products */,
-				82D099FA27629B2400A1A424 /* Frameworks */,
+				82C22C182785689900703BB2 /* ez.expand.segs */,
+				82C22C172785689800703BB2 /* ez.expand.segs.out.correct */,
 			);
+			path = data;
 			sourceTree = "<group>";
 		};
-		82C7A4CD2750AA30006F655E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				82C7A4CC2750AA30006F655E /* CrewOptimizer */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		82C7A4CE2750AA30006F655E /* CrewOptimizer */ = {
+		82C22BF52782E0F300703BB2 /* src */ = {
 			isa = PBXGroup;
 			children = (
 				82C7A4CF2750AA30006F655E /* main.cpp */,
@@ -139,16 +193,50 @@
 				82010C43277879E800EBD01C /* IoController.cpp */,
 				82010C44277879E800EBD01C /* IoController.hpp */,
 			);
-			path = CrewOptimizer;
+			path = src;
+			sourceTree = "<group>";
+		};
+		82C22C8227872D4900703BB2 /* unit_test */ = {
+			isa = PBXGroup;
+			children = (
+				82C22C192786B1F200703BB2 /* TestDefinition.cpp */,
+				82C22C1A2786B1F200703BB2 /* TestDefinition.hpp */,
+				82C22C1B2786C1AE00703BB2 /* TestUtility.cpp */,
+				82C22C1C2786C1AE00703BB2 /* TestUtility.hpp */,
+				82C22C8B2787374E00703BB2 /* IoTest.cpp */,
+				82C22C8C2787374E00703BB2 /* IoTest.hpp */,
+			);
+			path = unit_test;
+			sourceTree = "<group>";
+		};
+		82C7A4C32750AA30006F655E = {
+			isa = PBXGroup;
+			children = (
+				82C22BF52782E0F300703BB2 /* src */,
+				82C22BF3278297C700703BB2 /* data */,
+				82C22C8227872D4900703BB2 /* unit_test */,
+				82C7A4CD2750AA30006F655E /* Products */,
+				82D099FA27629B2400A1A424 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		82C7A4CD2750AA30006F655E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				82C7A4CC2750AA30006F655E /* CrewOptimizer */,
+				82C22C8127872D4900703BB2 /* CrewOptimizerUnitTest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		82D099FA27629B2400A1A424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82C22C1F2786C58E00703BB2 /* libgtest.a */,
+				82C22C1D2786C51700703BB2 /* libgtest_main.a */,
 				822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */,
 				82D09A05276324D200A1A424 /* libfmt.8.0.1.dylib */,
 				82D09A06276324D200A1A424 /* libfmt.a */,
-				82D099FB27629B2400A1A424 /* libortools.9.1.dylib */,
 				82D099FE27629B2400A1A424 /* libOsi.1.13.6.dylib */,
 				82D099FF27629B2500A1A424 /* libOsiCbc.3.10.5.dylib */,
 				82D099FC27629B2400A1A424 /* libOsiClp.1.14.6.dylib */,
@@ -160,6 +248,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		82C22C8027872D4900703BB2 /* CrewOptimizerUnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 82C22C8527872D4900703BB2 /* Build configuration list for PBXNativeTarget "CrewOptimizerUnitTest" */;
+			buildPhases = (
+				82C22C7D27872D4900703BB2 /* Sources */,
+				82C22C7E27872D4900703BB2 /* Frameworks */,
+				82C22C7F27872D4900703BB2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CrewOptimizerUnitTest;
+			productName = CrewOptimizerUnitTest;
+			productReference = 82C22C8127872D4900703BB2 /* CrewOptimizerUnitTest */;
+			productType = "com.apple.product-type.tool";
+		};
 		82C7A4CB2750AA30006F655E /* CrewOptimizer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 82C7A4D32750AA30006F655E /* Build configuration list for PBXNativeTarget "CrewOptimizer" */;
@@ -167,6 +272,7 @@
 				82C7A4C82750AA30006F655E /* Sources */,
 				82C7A4C92750AA30006F655E /* Frameworks */,
 				82C7A4CA2750AA30006F655E /* CopyFiles */,
+				82C22C022784188C00703BB2 /* Embed Libraries */,
 			);
 			buildRules = (
 			);
@@ -184,8 +290,11 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					82C22C8027872D4900703BB2 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					82C7A4CB2750AA30006F655E = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -205,11 +314,33 @@
 			projectRoot = "";
 			targets = (
 				82C7A4CB2750AA30006F655E /* CrewOptimizer */,
+				82C22C8027872D4900703BB2 /* CrewOptimizerUnitTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		82C22C7D27872D4900703BB2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				82C22C992787425600703BB2 /* Definition.cpp in Sources */,
+				82C22C952787425600703BB2 /* Utility.cpp in Sources */,
+				82C22C962787425600703BB2 /* ConstraintBase.cpp in Sources */,
+				82C22C972787425600703BB2 /* OptEngine.cpp in Sources */,
+				82C22C8927872E6C00703BB2 /* TestDefinition.cpp in Sources */,
+				82C22C8827872E6C00703BB2 /* TestUtility.cpp in Sources */,
+				82C22C9A2787425600703BB2 /* Constraints.cpp in Sources */,
+				82C22C942787425600703BB2 /* Solution.cpp in Sources */,
+				82C22C922787425600703BB2 /* Pairing.cpp in Sources */,
+				82C22C912787425600703BB2 /* Complement.cpp in Sources */,
+				82C22C8D2787374E00703BB2 /* IoTest.cpp in Sources */,
+				82C22C982787425600703BB2 /* IoController.cpp in Sources */,
+				82C22C932787425600703BB2 /* Duty.cpp in Sources */,
+				82C22C902787423200703BB2 /* Sector.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82C7A4C82750AA30006F655E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +363,34 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		82C22C8627872D4900703BB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/googletest/1.11.0/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		82C22C8727872D4900703BB2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_STYLE = Automatic;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/googletest/1.11.0/lib,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		82C7A4D12750AA30006F655E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -273,6 +432,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -293,6 +453,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -338,8 +499,10 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -351,6 +514,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -363,6 +527,7 @@
 					x86_64,
 				);
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -372,7 +537,9 @@
 					/usr/local/Cellar/cbc/2.10.5/lib,
 					/usr/local/Cellar/fmt/8.0.1/lib,
 					"/usr/local/Cellar/or-tools/9.2_2/lib",
+					/usr/local/Cellar/googletest/1.11.0/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -385,6 +552,7 @@
 					x86_64,
 				);
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				LIBRARY_SEARCH_PATHS = (
@@ -395,7 +563,9 @@
 					/usr/local/Cellar/cbc/2.10.5/lib,
 					/usr/local/Cellar/fmt/8.0.1/lib,
 					"/usr/local/Cellar/or-tools/9.2_2/lib",
+					/usr/local/Cellar/googletest/1.11.0/lib,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -403,6 +573,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		82C22C8527872D4900703BB2 /* Build configuration list for PBXNativeTarget "CrewOptimizerUnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82C22C8627872D4900703BB2 /* Debug */,
+				82C22C8727872D4900703BB2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		82C7A4C72750AA30006F655E /* Build configuration list for PBXProject "CrewOptimizer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

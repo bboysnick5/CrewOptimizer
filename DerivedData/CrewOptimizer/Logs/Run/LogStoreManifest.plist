@@ -6,6 +6,74 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
+		<key>07B898D4-6813-49CF-A0C6-9DC6DA0BF361</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>07B898D4-6813-49CF-A0C6-9DC6DA0BF361.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CrewOptimizer project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CrewOptimizer</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run CrewOptimizer</string>
+			<key>timeStartedRecording</key>
+			<real>662733363.14571297</real>
+			<key>timeStoppedRecording</key>
+			<real>662733365.95967996</real>
+			<key>title</key>
+			<string>Run CrewOptimizer</string>
+			<key>uniqueIdentifier</key>
+			<string>07B898D4-6813-49CF-A0C6-9DC6DA0BF361</string>
+		</dict>
+		<key>2BA0CB94-E409-48BA-982C-11B7A0A9F3A1</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>2BA0CB94-E409-48BA-982C-11B7A0A9F3A1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CrewOptimizer project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CrewOptimizer</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run CrewOptimizer</string>
+			<key>timeStartedRecording</key>
+			<real>662732774.14438403</real>
+			<key>timeStoppedRecording</key>
+			<real>662732784.55202198</real>
+			<key>title</key>
+			<string>Run CrewOptimizer</string>
+			<key>uniqueIdentifier</key>
+			<string>2BA0CB94-E409-48BA-982C-11B7A0A9F3A1</string>
+		</dict>
 		<key>52D5645F-1FC4-48B6-A58B-969E749189D8</key>
 		<dict>
 			<key>className</key>
@@ -40,7 +108,7 @@
 			<key>uniqueIdentifier</key>
 			<string>52D5645F-1FC4-48B6-A58B-969E749189D8</string>
 		</dict>
-		<key>811565CE-8020-4375-B7F6-446FC1853ECD</key>
+		<key>8103D4AF-CA6B-40C6-BFF1-4C9711A133E0</key>
 		<dict>
 			<key>className</key>
 			<string>DBGConsoleLog</string>
@@ -49,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
 			<key>fileName</key>
-			<string>811565CE-8020-4375-B7F6-446FC1853ECD.xcactivitylog</string>
+			<string>8103D4AF-CA6B-40C6-BFF1-4C9711A133E0.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,13 +134,81 @@
 			<key>signature</key>
 			<string>Run CrewOptimizer</string>
 			<key>timeStartedRecording</key>
-			<real>660845568.71365201</real>
+			<real>662732644.45493102</real>
 			<key>timeStoppedRecording</key>
-			<real>660845572.41699505</real>
+			<real>662732673.71271503</real>
 			<key>title</key>
 			<string>Run CrewOptimizer</string>
 			<key>uniqueIdentifier</key>
-			<string>811565CE-8020-4375-B7F6-446FC1853ECD</string>
+			<string>8103D4AF-CA6B-40C6-BFF1-4C9711A133E0</string>
+		</dict>
+		<key>9508DF6C-D75F-4918-AE91-265D40A0F54B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9508DF6C-D75F-4918-AE91-265D40A0F54B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CrewOptimizer project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CrewOptimizer</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run CrewOptimizer</string>
+			<key>timeStartedRecording</key>
+			<real>662968796.19313395</real>
+			<key>timeStoppedRecording</key>
+			<real>662968801.23576796</real>
+			<key>title</key>
+			<string>Run CrewOptimizer</string>
+			<key>uniqueIdentifier</key>
+			<string>9508DF6C-D75F-4918-AE91-265D40A0F54B</string>
+		</dict>
+		<key>F5B26525-1622-4ACA-90B4-6BEC259BD67B</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F5B26525-1622-4ACA-90B4-6BEC259BD67B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>CrewOptimizer project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>CrewOptimizer</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run CrewOptimizer</string>
+			<key>timeStartedRecording</key>
+			<real>662896338.107692</real>
+			<key>timeStoppedRecording</key>
+			<real>662896355.60757804</real>
+			<key>title</key>
+			<string>Run CrewOptimizer</string>
+			<key>uniqueIdentifier</key>
+			<string>F5B26525-1622-4ACA-90B4-6BEC259BD67B</string>
 		</dict>
 	</dict>
 </dict>
