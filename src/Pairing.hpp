@@ -20,10 +20,10 @@ public:
     std::uint8_t size() const;
     
 private:
-    gen::DurationMins prg_time_;
+    chr::DurationMins prg_time_;
     std::uint32_t prg_no_;
     std::vector<Duty> duties_;
-    gen::Airport base_;
+    Airport base_;
 };
 
 

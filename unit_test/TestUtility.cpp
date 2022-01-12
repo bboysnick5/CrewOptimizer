@@ -14,9 +14,9 @@
 
 namespace tst_util {
 
-bool CompareFiles(std::string_view filename_1, std::string_view filename_2) {
-  std::ifstream f1(filename_1, std::ifstream::binary|std::ifstream::ate);
-  std::ifstream f2(filename_2, std::ifstream::binary|std::ifstream::ate);
+bool CompareFiles(std::string_view filename1, std::string_view filename2) {
+  std::ifstream f1(filename1, std::ifstream::binary|std::ifstream::ate);
+  std::ifstream f2(filename2, std::ifstream::binary|std::ifstream::ate);
 
   if (f1.fail() || f2.fail()) {
     return false; //file problem

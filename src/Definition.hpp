@@ -10,6 +10,7 @@
 
 #include <ctime>
 #include <cstdint>
+#include <cstdlib>
 
 #include <array>
 #include <chrono>
@@ -18,63 +19,25 @@
 
 #include <magic_enum.hpp>
 
+#include "Chrono.hpp"
 #include "Utility.hpp"
 
 //#include <boost/chrono.hpp>
 
 
-namespace gen {
 
-
-using AirlineCode = std::array<char, 3>;
-using TpSysClkMins = std::chrono::time_point<std::chrono::system_clock, std::chrono::minutes>;
-using TpSysClkDays = std::chrono::time_point<std::chrono::system_clock, std::chrono::days>;
-using DurationMins = std::chrono::minutes;
-using DurationDays = std::chrono::days;
-using RuleSetCompIdx = std::uint8_t;
-
-
-struct Airport {
-    std::array<char, 3> arp_cd;
-    DurationMins utc_offset_duration;
-};
-
-using FltGrpCd = std::array<char, 3>;
-
-}
-
-namespace sec {
-
-using LegNo = std::uint8_t;
-using Id = std::uint16_t;
-
-struct FltNum {
-    std::uint16_t fn_numeric;
-    char fn_suffix;
-};
-
-struct TailNum {
-    char tn_prefix;
-    std::uint16_t tn_numeric;
-};
-
-using EqpCd = std::array<char, 3>;
-
-enum class RegionType : char {
-    kDom = 'D',
-    kInt = 'I',
-    kReg = 'R'
-};
-
-enum class OprType {
-    kOpr,
-    kDhd,
-    kRst
-};
-}
 
 namespace dut {
 
+namespace dft {
+static constexpr std::uint8_t kDefaultMaxSecsOneDuty = 16;
+static constexpr chr::DurationDays kDefaultMaxDutyInDays(4);
+static constexpr chr::DurationHours kDefaultMaxTransitInHours(24);
+}
+
+static std::uint8_t kMaxSecsOneDuty = dft::kDefaultMaxSecsOneDuty;
+static chr::DurationDays kMaxDutyInDays = dft::kDefaultMaxDutyInDays;
+static chr::DurationHours kMaxTransitInHours = dft::kDefaultMaxTransitInHours;
 
 }
 
@@ -85,6 +48,8 @@ namespace prg {
 
 
 namespace ser {
+
+using SecSvIdxType = std::uint16_t;
 
 static constexpr std::string_view kYmdFormat{"%m%d%Y"};
 static constexpr std::string_view kHmFormat{"%H%M"};

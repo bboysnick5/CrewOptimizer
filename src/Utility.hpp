@@ -50,7 +50,16 @@ struct is_chrono_duration<std::chrono::duration<R, P>> : std::true_type {};
 template <typename R, typename P>
 inline constexpr bool is_chrono_duration_v = is_chrono_duration<std::chrono::duration<R, P>>::value;
 
+template <class Rep1, class Period1, class Rep2, class Period2, class Rep3, class Period3>
+bool WithinChronoDurationRange(std::chrono::duration<Rep1, Period1> test_duraiton,
+                               std::chrono::duration<Rep2, Period2> min_duration,
+                               std::chrono::duration<Rep3, Period3> max_duration) {
+    return test_duraiton < max_duration && test_duraiton > min_duration;
+}
 
+
+
+/*
 template <std::string_view const&... Svs>
 struct sv_concat
 {
@@ -74,7 +83,7 @@ struct sv_concat
 // Helper to get the value out
 template <std::string_view const&... Svs>
 static constexpr auto sv_concat_v = sv_concat<Svs...>::value;
-
+*/
 
 }
 

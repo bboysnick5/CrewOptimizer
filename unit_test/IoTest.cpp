@@ -7,6 +7,7 @@
 
 #include "IoTest.hpp"
 
+#include <algorithm>
 #include <iterator>
 
 #include <gtest/gtest.h>
@@ -44,4 +45,20 @@ protected:
 TEST_F(IoControllerTest, SecOutFileEq) {
     io_ctl_.WriteSecToFile(tst::kTestOutputSchFile, secs_);
     EXPECT_TRUE(tst_util::CompareFiles(tst::kTestOutputSchFile, tst::kTestCorrectOutputSchFile));
+}
+
+TEST_F(IoControllerTest, SecSortTwoLineTest) {
+    std::vector<Sector> two_line_secs{secs_[1291], secs_[997]};
+    std::vector<Sector> two_line_secs_correct(two_line_secs.rbegin(), two_line_secs.rend());
+    std::sort(two_line_secs.begin(), two_line_secs.end(), SecComparator{});
+    EXPECT_EQ(two_line_secs, two_line_secs_correct);
+    std::sort(two_line_secs.begin(), two_line_secs.end(), SecComparator{});
+    EXPECT_EQ(two_line_secs, two_line_secs_correct);
+}
+
+
+TEST_F(IoControllerTest, SecSortWholeFileTest) {
+    std::sort(secs_.begin(), secs_.end(), SecComparator{});
+    io_ctl_.WriteSecToFile(tst::kTestOutputSchFile, secs_);
+    EXPECT_TRUE(tst_util::CompareFiles(tst::kTestOutputSchFile, tst::kTestCorrectSortedOutputSchFile));
 }

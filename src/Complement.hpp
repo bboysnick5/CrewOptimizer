@@ -10,6 +10,8 @@
 
 #include <cstdint>
 
+#include <magic_enum.hpp>
+
 #include <array>
 
 enum class FDRank : std::uint8_t {
@@ -18,7 +20,6 @@ enum class FDRank : std::uint8_t {
     kFO,
     kRFO,
     kSO,
-    Count
 };
 
 enum class CCRank : std::uint8_t {
@@ -27,20 +28,18 @@ enum class CCRank : std::uint8_t {
     kFA,
     kFB,
     kSS,
-    Count
 };
 
 enum class AMRank : std::uint8_t {
     kAMCF,
     kAMSF,
-    kAMST,
-    Count
+    kAMST，
 };
 
 class Complement {
-    std::array<std::uint8_t, static_cast<std::uint8_t>(FDRank::Count)> fd_comp_{0};
-    std::array<std::uint8_t, static_cast<std::uint8_t>(CCRank::Count)> cc_comp_{0};
-    std::array<std::uint8_t, static_cast<std::uint8_t>(AMRank::Count)> am_comp_{0};
+    std::array<std::uint8_t, static_cast<std::uint8_t>(magic_enum::enum_count<FDRank>())> fd_comp_{0};
+    std::array<std::uint8_t, static_cast<std::uint8_t>(magic_enum::enum_count<CCRank>())> cc_comp_{0};
+    std::array<std::uint8_t, static_cast<std::uint8_t>(magic_enum::enum_count<AMRank>())> am_comp_{0};
 };
 
 #endif /* Complement_hpp */

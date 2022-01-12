@@ -15,6 +15,7 @@ namespace tst {
 static constexpr std::string_view kTestInputSchFile("../../data/ez.expand.segs");
 static constexpr std::string_view kTestOutputSchFile("../../data/ez.expand.segs.out");
 static constexpr std::string_view kTestCorrectOutputSchFile("../../data/ez.expand.segs.out.correct");
+static constexpr std::string_view kTestCorrectSortedOutputSchFile("../../data/ez.expand.segs.out.sorted.correct");
 
 
 }

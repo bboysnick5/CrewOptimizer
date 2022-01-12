@@ -13,3 +13,7 @@ input_sectors_(input_sectors), leftover_sectors_(input_sectors), sol_{} {}
 void OptEngine::optimize() {
     
 }
+
+void OptEngine::EnumDuties() {
+    
+}

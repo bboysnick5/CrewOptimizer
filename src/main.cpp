@@ -25,9 +25,10 @@ int main(int argc, const char * argv[]) {
     }
     
     IoController io_ctl{};
-    const std::vector<Sector> secs = io_ctl.ParseSchFileStoreSecStrs(argv[1]);
+    std::vector<Sector> secs = io_ctl.ParseSchFileStoreSecStrs(argv[1]);
+    std::sort(secs.begin(), secs.end(), SecComparator{});
     io_ctl.WriteSecToFile(argv[2], secs);
-    
+
     
     return 0;
 }

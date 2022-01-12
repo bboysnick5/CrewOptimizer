@@ -14,7 +14,7 @@
 
 namespace tst_util {
 
-bool CompareFiles(std::string_view filename_1, std::string_view filename_2);
+bool CompareFiles(std::string_view filename1, std::string_view filename2);
 
 }
 

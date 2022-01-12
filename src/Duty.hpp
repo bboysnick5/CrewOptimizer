@@ -15,7 +15,7 @@
 
 class Duty {
     
-    gen::DurationMins duty_tm_, fdp_tm_, brief_tm_, debrief_tm_;
+    chr::DurationMins duty_tm_, fdp_tm_, brief_tm_, debrief_tm_;
     std::vector<Sector> sectors_;
 };
 

@@ -35,7 +35,9 @@
 
 class Parser {
 public:
-    void SetCurLineToParse(std::string_view line_sv);
+    void SetCurLineToParseSecSvIdx(std::string_view line_sv, ser::SecSvIdxType idx);
+    
+    ser::SecSvIdxType GetSecSvIdx() const;
     
     template <typename ReturnType, std::enable_if_t<!std::is_enum_v<ReturnType>, bool> = true>
     ReturnType ParseField(ser::SecField field_enum) const;
@@ -61,23 +63,30 @@ private:
     template<typename ReturnType, std::enable_if_t<util::is_chrono_time_point_v<std::chrono::system_clock> ||
                                                    (util::is_chrono_duration_v<typename ReturnType::rep,
                                                                                typename ReturnType::period> &&
-                                                    !std::is_same_v<ReturnType, gen::DurationDays>),
+                                                    !std::is_same_v<ReturnType, chr::DurationDays>),
                                                    bool> = true>
     static ReturnType ParseFieldSv(ser::SecField field_enum, std::string_view field_sv);
     
     // patch for pre C++ 20 chrono lib compiler. Can be substitude with chrono::parse and format %Q
     // once C++ 20 chrono lands.
-    template<typename ReturnType, std::enable_if_t<std::is_same_v<ReturnType, gen::DurationDays>, bool> = true>
+    template<typename ReturnType, std::enable_if_t<std::is_same_v<ReturnType, chr::DurationDays>, bool> = true>
     static ReturnType ParseFieldSv(ser::SecField field_enum, std::string_view field_sv);
     
     // Data field
     std::string_view line_sv_;
+    ser::SecSvIdxType cur_sec_sv_idx_ = 0;
 };
 
 
-inline void Parser::SetCurLineToParse(std::string_view line_sv) {
+inline void Parser::SetCurLineToParseSecSvIdx(std::string_view line_sv, ser::SecSvIdxType idx) {
     line_sv_ = line_sv;
+    cur_sec_sv_idx_ = idx;
 }
+
+inline ser::SecSvIdxType Parser::GetSecSvIdx() const {
+    return cur_sec_sv_idx_;
+}
+
 
 template <typename ReturnType, std::enable_if_t<!std::is_enum_v<ReturnType>, bool>>
 inline ReturnType Parser::ParseField(ser::SecField field_enum) const {
@@ -116,7 +125,7 @@ inline ReturnType Parser::ParseFieldSv(ser::SecField field_enum, std::string_vie
 template<typename ReturnType, std::enable_if_t<util::is_chrono_time_point_v<std::chrono::system_clock> ||
                                                (util::is_chrono_duration_v<typename ReturnType::rep,
                                                                            typename ReturnType::period> &&
-                                                !std::is_same_v<ReturnType, gen::DurationDays>),
+                                                !std::is_same_v<ReturnType, chr::DurationDays>),
                                                bool>>
 inline ReturnType Parser::ParseFieldSv(ser::SecField field_enum, std::string_view field_sv) {
     ReturnType tp;
@@ -127,9 +136,9 @@ inline ReturnType Parser::ParseFieldSv(ser::SecField field_enum, std::string_vie
     return tp;
 }
 
-template<typename ReturnType, std::enable_if_t<std::is_same_v<ReturnType, gen::DurationDays>, bool>>
+template<typename ReturnType, std::enable_if_t<std::is_same_v<ReturnType, chr::DurationDays>, bool>>
 inline ReturnType Parser::ParseFieldSv(ser::SecField field_enum, std::string_view field_sv) {
-    return gen::DurationDays(std::stoul(std::string(field_sv)));
+    return chr::DurationDays(std::stoul(std::string(field_sv)));
 }
 
 
