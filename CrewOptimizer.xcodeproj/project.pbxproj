@@ -8,6 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		82010C45277879E800EBD01C /* IoController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82010C43277879E800EBD01C /* IoController.cpp */; };
+		820C871127945466002CE1BA /* libfolly.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 820C870F27945466002CE1BA /* libfolly.dylib */; };
+		820C871227945466002CE1BA /* libfolly.0.58.0-dev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 820C871027945466002CE1BA /* libfolly.0.58.0-dev.dylib */; };
+		820C871727945486002CE1BA /* libjemalloc_pic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 820C871327945486002CE1BA /* libjemalloc_pic.a */; };
+		820C871827945486002CE1BA /* libjemalloc.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 820C871427945486002CE1BA /* libjemalloc.dylib */; };
+		820C871927945486002CE1BA /* libjemalloc.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 820C871527945486002CE1BA /* libjemalloc.2.dylib */; };
+		820C871A27945486002CE1BA /* libjemalloc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 820C871627945486002CE1BA /* libjemalloc.a */; };
+		8262295027945B8D0067A5A2 /* RuleBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C22C9B278827F500703BB2 /* RuleBase.cpp */; };
+		8262295127945B900067A5A2 /* DutyRuleBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C22CA127882A8A00703BB2 /* DutyRuleBase.cpp */; };
+		8262295227945B930067A5A2 /* DutyRuleTransit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82C22CA7278832F600703BB2 /* DutyRuleTransit.cpp */; };
+		82622955279465D10067A5A2 /* libfolly.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82622953279465D10067A5A2 /* libfolly.a */; };
+		82622956279465D10067A5A2 /* libfolly.0.58.0-dev.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82622954279465D10067A5A2 /* libfolly.0.58.0-dev.dylib */; };
+		8262295A279465F70067A5A2 /* libjemalloc.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 82622957279465F70067A5A2 /* libjemalloc.2.dylib */; };
+		8262295B279465F70067A5A2 /* libjemalloc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82622958279465F70067A5A2 /* libjemalloc.a */; };
+		8262295C279465F70067A5A2 /* libjemalloc_pic.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82622959279465F70067A5A2 /* libjemalloc_pic.a */; };
 		82BCC3522754B0F20058043D /* OptEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 82BCC3502754B0F20058043D /* OptEngine.cpp */; };
 		82C22C04278418B000703BB2 /* libortools.9.2.dylib in Embed Libraries */ = {isa = PBXBuildFile; fileRef = 822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		82C22C06278418B000703BB2 /* libortools.9.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */; };
@@ -79,8 +93,20 @@
 /* Begin PBXFileReference section */
 		82010C43277879E800EBD01C /* IoController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = IoController.cpp; sourceTree = "<group>"; };
 		82010C44277879E800EBD01C /* IoController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = IoController.hpp; sourceTree = "<group>"; };
+		820C870E279453F8002CE1BA /* ez.expand.segs.out.sorted.correct */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ez.expand.segs.out.sorted.correct; sourceTree = "<group>"; };
+		820C870F27945466002CE1BA /* libfolly.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfolly.dylib; path = ../../../../usr/local/lib/libfolly.dylib; sourceTree = "<group>"; };
+		820C871027945466002CE1BA /* libfolly.0.58.0-dev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libfolly.0.58.0-dev.dylib"; path = "../../../../usr/local/lib/libfolly.0.58.0-dev.dylib"; sourceTree = "<group>"; };
+		820C871327945486002CE1BA /* libjemalloc_pic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjemalloc_pic.a; path = ../../../../usr/local/lib/libjemalloc_pic.a; sourceTree = "<group>"; };
+		820C871427945486002CE1BA /* libjemalloc.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjemalloc.dylib; path = ../../../../usr/local/lib/libjemalloc.dylib; sourceTree = "<group>"; };
+		820C871527945486002CE1BA /* libjemalloc.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjemalloc.2.dylib; path = ../../../../usr/local/lib/libjemalloc.2.dylib; sourceTree = "<group>"; };
+		820C871627945486002CE1BA /* libjemalloc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjemalloc.a; path = ../../../../usr/local/lib/libjemalloc.a; sourceTree = "<group>"; };
 		822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libortools.9.2.dylib; path = "../../../../usr/local/Cellar/or-tools/9.2_2/lib/libortools.9.2.dylib"; sourceTree = "<group>"; };
 		822DFB8B2779CD05002D5FF4 /* Parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Parser.hpp; sourceTree = "<group>"; };
+		82622953279465D10067A5A2 /* libfolly.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libfolly.a; path = ../../../../usr/local/Cellar/folly/2022.01.10.00/lib/libfolly.a; sourceTree = "<group>"; };
+		82622954279465D10067A5A2 /* libfolly.0.58.0-dev.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libfolly.0.58.0-dev.dylib"; path = "../../../../usr/local/Cellar/folly/2022.01.10.00/lib/libfolly.0.58.0-dev.dylib"; sourceTree = "<group>"; };
+		82622957279465F70067A5A2 /* libjemalloc.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libjemalloc.2.dylib; path = ../../../../usr/local/Cellar/jemalloc/5.2.1_1/lib/libjemalloc.2.dylib; sourceTree = "<group>"; };
+		82622958279465F70067A5A2 /* libjemalloc.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjemalloc.a; path = ../../../../usr/local/Cellar/jemalloc/5.2.1_1/lib/libjemalloc.a; sourceTree = "<group>"; };
+		82622959279465F70067A5A2 /* libjemalloc_pic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libjemalloc_pic.a; path = ../../../../usr/local/Cellar/jemalloc/5.2.1_1/lib/libjemalloc_pic.a; sourceTree = "<group>"; };
 		82BCC3502754B0F20058043D /* OptEngine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = OptEngine.cpp; sourceTree = "<group>"; };
 		82BCC3512754B0F20058043D /* OptEngine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = OptEngine.hpp; sourceTree = "<group>"; };
 		82C22C172785689800703BB2 /* ez.expand.segs.out.correct */ = {isa = PBXFileReference; lastKnownFileType = text; path = ez.expand.segs.out.correct; sourceTree = "<group>"; };
@@ -135,6 +161,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8262295A279465F70067A5A2 /* libjemalloc.2.dylib in Frameworks */,
+				8262295B279465F70067A5A2 /* libjemalloc.a in Frameworks */,
+				8262295C279465F70067A5A2 /* libjemalloc_pic.a in Frameworks */,
+				82622955279465D10067A5A2 /* libfolly.a in Frameworks */,
+				82622956279465D10067A5A2 /* libfolly.0.58.0-dev.dylib in Frameworks */,
 				82C22C8E27873E5D00703BB2 /* libgtest.a in Frameworks */,
 				82C22C8F27873E5D00703BB2 /* libgtest_main.a in Frameworks */,
 			);
@@ -144,6 +175,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				820C871127945466002CE1BA /* libfolly.dylib in Frameworks */,
+				820C871227945466002CE1BA /* libfolly.0.58.0-dev.dylib in Frameworks */,
+				820C871727945486002CE1BA /* libjemalloc_pic.a in Frameworks */,
+				820C871827945486002CE1BA /* libjemalloc.dylib in Frameworks */,
+				820C871927945486002CE1BA /* libjemalloc.2.dylib in Frameworks */,
+				820C871A27945486002CE1BA /* libjemalloc.a in Frameworks */,
 				82C22C06278418B000703BB2 /* libortools.9.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -156,6 +193,7 @@
 			children = (
 				82C22C182785689900703BB2 /* ez.expand.segs */,
 				82C22C172785689800703BB2 /* ez.expand.segs.out.correct */,
+				820C870E279453F8002CE1BA /* ez.expand.segs.out.sorted.correct */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -243,6 +281,17 @@
 		82D099FA27629B2400A1A424 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82622959279465F70067A5A2 /* libjemalloc_pic.a */,
+				82622957279465F70067A5A2 /* libjemalloc.2.dylib */,
+				82622958279465F70067A5A2 /* libjemalloc.a */,
+				82622954279465D10067A5A2 /* libfolly.0.58.0-dev.dylib */,
+				82622953279465D10067A5A2 /* libfolly.a */,
+				820C871327945486002CE1BA /* libjemalloc_pic.a */,
+				820C871527945486002CE1BA /* libjemalloc.2.dylib */,
+				820C871627945486002CE1BA /* libjemalloc.a */,
+				820C871427945486002CE1BA /* libjemalloc.dylib */,
+				820C871027945466002CE1BA /* libfolly.0.58.0-dev.dylib */,
+				820C870F27945466002CE1BA /* libfolly.dylib */,
 				82C22C1F2786C58E00703BB2 /* libgtest.a */,
 				82C22C1D2786C51700703BB2 /* libgtest_main.a */,
 				822DFB8827799F41002D5FF4 /* libortools.9.2.dylib */,
@@ -335,10 +384,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8262295027945B8D0067A5A2 /* RuleBase.cpp in Sources */,
 				82C22C992787425600703BB2 /* Definition.cpp in Sources */,
 				82C22C952787425600703BB2 /* Utility.cpp in Sources */,
 				82C22CAD278D4B6700703BB2 /* Airport.cpp in Sources */,
 				82C22C972787425600703BB2 /* OptEngine.cpp in Sources */,
+				8262295227945B930067A5A2 /* DutyRuleTransit.cpp in Sources */,
 				82C22C8927872E6C00703BB2 /* TestDefinition.cpp in Sources */,
 				82C22C8827872E6C00703BB2 /* TestUtility.cpp in Sources */,
 				82C22C942787425600703BB2 /* Solution.cpp in Sources */,
@@ -350,6 +401,7 @@
 				82C22CB6278EBED700703BB2 /* Chrono.cpp in Sources */,
 				82C22CB2278E809D00703BB2 /* Common.cpp in Sources */,
 				82C22C902787423200703BB2 /* Sector.cpp in Sources */,
+				8262295127945B900067A5A2 /* DutyRuleBase.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +439,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/googletest/1.11.0/lib,
+					/usr/local/Cellar/folly/2022.01.10.00/lib,
+					/usr/local/Cellar/jemalloc/5.2.1_1/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -401,6 +455,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/Cellar/googletest/1.11.0/lib,
+					/usr/local/Cellar/folly/2022.01.10.00/lib,
+					/usr/local/Cellar/jemalloc/5.2.1_1/lib,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -449,6 +505,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				EXCLUDED_ARCHS = arm64;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -516,6 +573,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				EXCLUDED_ARCHS = arm64;
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = fast;
@@ -545,16 +603,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/usr/local/Cellar/or-tools/9.1/lib",
-					/usr/local/Cellar/clp/1.17.6_1/lib,
-					/usr/local/Cellar/osi/0.108.6/lib,
-					/usr/local/Cellar/cbc/2.10.5/lib,
-					/usr/local/Cellar/fmt/8.0.1/lib,
-					"/usr/local/Cellar/or-tools/9.2_2/lib",
-					/usr/local/Cellar/googletest/1.11.0/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -571,16 +620,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				GCC_OPTIMIZATION_LEVEL = fast;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"/usr/local/Cellar/or-tools/9.1/lib",
-					/usr/local/Cellar/clp/1.17.6_1/lib,
-					/usr/local/Cellar/osi/0.108.6/lib,
-					/usr/local/Cellar/cbc/2.10.5/lib,
-					/usr/local/Cellar/fmt/8.0.1/lib,
-					"/usr/local/Cellar/or-tools/9.2_2/lib",
-					/usr/local/Cellar/googletest/1.11.0/lib,
-				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

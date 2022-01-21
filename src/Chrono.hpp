@@ -8,16 +8,23 @@
 #ifndef Chrono_hpp
 #define Chrono_hpp
 
+#include <cstdint>
 
 #include <chrono>
+#include <ratio>
 
 namespace chr {
 
-using TpSysClkMins = std::chrono::time_point<std::chrono::system_clock, std::chrono::minutes>;
-using TpSysClkDays = std::chrono::time_point<std::chrono::system_clock, std::chrono::days>;
-using DurationMins = std::chrono::minutes;
-using DurationHours = std::chrono::hours;
-using DurationDays = std::chrono::days;
+using DurationMins4B = std::chrono::duration<std::int32_t, std::ratio<60>>;
+using DurationHours4B = std::chrono::duration<std::int32_t,
+                                              std::ratio_multiply<std::ratio<60>, DurationMins4B::period>>;
+using DurationDays4B = std::chrono::duration<std::int32_t,
+                                             std::ratio_multiply<std::ratio<24>, DurationHours4B::period>>;
+
+using TpMinsUnixEpoch4B = std::chrono::time_point<std::chrono::system_clock, DurationMins4B>;
+using TpDaysUnixEpoch4B = std::chrono::time_point<std::chrono::system_clock, DurationDays4B>;
+
+
 
 template <class Rep, class Period>
 using Duration = std::chrono::duration<Rep, Period>;

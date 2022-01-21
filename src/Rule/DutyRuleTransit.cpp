@@ -7,6 +7,11 @@
 
 #include "DutyRuleTransit.hpp"
 
-bool DutyRuleTransit::Check() const {
+namespace rule {
+
+template <MinMaxRule MinMaxEnum, std::uint8_t NumEntries>
+bool DutyRuleTransit<MinMaxEnum, NumEntries>::Check(const duty::Duty&, const sec::Sector&) const {
     return true;
+}
+
 }

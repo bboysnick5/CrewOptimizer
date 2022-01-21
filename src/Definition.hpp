@@ -17,6 +17,10 @@
 #include <string>
 #include <string_view>
 
+#include <absl/container/flat_hash_map.h>
+#include <boost/container/small_vector.hpp>
+#include <folly/FBVector.h>
+#include <folly/small_vector.h>
 #include <magic_enum.hpp>
 
 #include "Chrono.hpp"
@@ -24,20 +28,31 @@
 
 //#include <boost/chrono.hpp>
 
+namespace ds {
+template <class T, std::size_t N>
+using SmallStackVec = folly::small_vector<T, N, folly::small_vector_policy::NoHeap, std::uint8_t>;
 
+template <class T>
+using Vector = folly::fbvector<T>;
+
+template <class K, class V>
+using HashMap = absl::flat_hash_map<K, V>;
+
+//using String = folly::fbstring;
+}
 
 
 namespace dut {
 
 namespace dft {
 static constexpr std::uint8_t kDefaultMaxSecsOneDuty = 16;
-static constexpr chr::DurationDays kDefaultMaxDutyInDays(4);
-static constexpr chr::DurationHours kDefaultMaxTransitInHours(24);
+static constexpr chr::DurationDays4B kDefaultMaxDutyInDays(4);
+static constexpr chr::DurationHours4B kDefaultMaxTransitInHours(24);
 }
 
 static std::uint8_t kMaxSecsOneDuty = dft::kDefaultMaxSecsOneDuty;
-static chr::DurationDays kMaxDutyInDays = dft::kDefaultMaxDutyInDays;
-static chr::DurationHours kMaxTransitInHours = dft::kDefaultMaxTransitInHours;
+static chr::DurationDays4B kMaxDutyInDays = dft::kDefaultMaxDutyInDays;
+static chr::DurationHours4B kMaxTransitInHours = dft::kDefaultMaxTransitInHours;
 
 }
 
@@ -54,6 +69,10 @@ using SecSvIdxType = std::uint16_t;
 static constexpr std::string_view kYmdFormat{"%m%d%Y"};
 static constexpr std::string_view kHmFormat{"%H%M"};
 static constexpr std::string_view kDayFormat{"%d"};
+static constexpr std::string_view kConvertStrToInt{"CONVERT"};
+static constexpr std::string_view kTranslateAlnumToUint{"TRANSLATE"};
+static constexpr std::string_view kPaddingReplacement{"   \0"};
+
 
 
 static constexpr char kLocalInd = 'L';
@@ -86,38 +105,41 @@ enum class SecField : std::uint8_t {
     kMysteriousPadding = 24,
 };
 
-struct FileFieldFormat {
+struct InputLineFieldFormat {
     const std::uint8_t start_idx;
     const std::uint8_t length;
-    const std::string_view str_chrono_format;
+    const std::string_view format_sv;
 };
 
-static constexpr std::array<FileFieldFormat, magic_enum::enum_count<ser::SecField>()> SecFieldStrFormatMap {{
+static constexpr
+std::array<InputLineFieldFormat,
+           magic_enum::enum_count<ser::SecField>()>
+          SecFieldEnumFieldFormatMap {{
     {3, 3, {}},                                    // kAirlineCode = 0
-    {7, 5, {}},                                   // kFltNo = 1
+    {7, 5, kConvertStrToInt},                                   // kFltNo = 1
     {11, 1, {}},                                        // kFltNoSuffix = 2
-    {12, 2, {}},                                    // kLegNo = 3
+    {12, 2, kConvertStrToInt},                                    // kLegNo = 3
     {15, 8, kYmdFormat},         // kDepYmd = 4
     {24, 8, kYmdFormat},         // kArrYmd = 5
     {48, 4, kHmFormat},           // kDepHhMm = 6
     {71, 1, {}},                                        // kDepArpUtcOffsetHhMmSign = 7
     {72, 4, kHmFormat},           // kDepArpUtcOffsetHhMm = 8
     {61, 4, kHmFormat},           // kBlkTm = 9
-    {41, 3, {}},                                        // kEqpCd = 10
-    {45, 3, {}},                                        // kDepArpCd = 11
-    {53, 3, {}},                                        // kArrArpCd = 12
+    {41, 3, kTranslateAlnumToUint},                                        // kEqpCd = 10
+    {45, 3, kTranslateAlnumToUint},                                        // kDepArpCd = 11
+    {53, 3, kTranslateAlnumToUint},                                        // kArrArpCd = 12
     {56, 4, kHmFormat},           // kArrHhMm = 13
     {76, 1, {}},                                        // kArrArpUtcOffsetHhMmSign = 14
     {77, 4, kHmFormat},           // kArrArpUtcOffsetHhMm = 15
     {82, 1, {}},                                        // kArrDayOffsetSign = 16
     {83, 1, kDayFormat},         // kArrDayOffset = 17
     {84, 1, {}},                                        // kSolComp = 18
-    {88, 5, {}},                                        // kNextFltNo = 19
+    {88, 5, kConvertStrToInt},                                        // kNextFltNo = 19
     {92, 1, {}},                                        // kNextFltNoSuffix = 20
     {96, 1, {}},                                        // kRegionType = 21
     {100, 1, {}},                                       // kLocalUtcInd = 22
-    {180, 6, {}},                                       // kId = 23
-    {192, 3, {}},                                       // kMysteriousPadding = 24
+    {180, 6, kConvertStrToInt},                                       // kId = 23
+    {192, 3, kPaddingReplacement},                                       // kMysteriousPadding = 24
 }};
 
 }

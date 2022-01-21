@@ -8,15 +8,30 @@
 #ifndef Duty_hpp
 #define Duty_hpp
 
+#include <limits>
 #include <vector>
 
 #include "Definition.hpp"
 #include "Sector.hpp"
 
+namespace duty {
+
+static constexpr std::uint8_t kMaxSecsOneDuty = std::numeric_limits<std::uint8_t>::max();
+
 class Duty {
+public:
+    using ContainedType = sec::Sector;
     
-    chr::DurationMins duty_tm_, fdp_tm_, brief_tm_, debrief_tm_;
-    std::vector<Sector> sectors_;
+    const sec::Sector& operator[](std::uint8_t idx) const;
+    
+    
+    
+private:
+    
+    chr::DurationMins4B duty_tm_, fdp_tm_, brief_tm_, debrief_tm_;
+    ds::SmallStackVec<sec::Sector, kMaxSecsOneDuty> sectors_;
 };
+
+}
 
 #endif /* Duty_hpp */

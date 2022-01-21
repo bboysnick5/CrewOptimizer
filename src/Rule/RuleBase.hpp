@@ -24,15 +24,27 @@
 
 #include "Pairing.hpp"
 
+template <class DutyOrPrg>
 class RuleBase {
 public:
-    virtual bool Check() const = 0;
+    virtual bool Check(const DutyOrPrg&, const typename DutyOrPrg::ContainedType&) const = 0;
     
-protected:
+private:
     std::string_view rule_name_, rule_desc_;
     std::uint32_t rule_id_;
 };
 
+enum class RuleDataType {
+    kSingleLine,
+    kLinearSearch,
+    kHashSearch
+};
+
+
+template <class K, class V>
+class RuleEssense {
+    
+};
 
 
 

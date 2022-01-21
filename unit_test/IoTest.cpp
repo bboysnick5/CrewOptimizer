@@ -37,7 +37,7 @@ protected:
     }
         
     std::vector<std::string> correct_sec_lines_;
-    std::vector<Sector> secs_;
+    std::vector<sec::Sector> secs_;
     IoController io_ctl_{};
 };
 
@@ -48,17 +48,22 @@ TEST_F(IoControllerTest, SecOutFileEq) {
 }
 
 TEST_F(IoControllerTest, SecSortTwoLineTest) {
-    std::vector<Sector> two_line_secs{secs_[1291], secs_[997]};
-    std::vector<Sector> two_line_secs_correct(two_line_secs.rbegin(), two_line_secs.rend());
-    std::sort(two_line_secs.begin(), two_line_secs.end(), SecComparator{});
+    std::vector<sec::Sector> two_line_secs{secs_[1291], secs_[997]};
+    std::vector<sec::Sector> two_line_secs_correct(two_line_secs.crbegin(), two_line_secs.crend());
+    std::sort(two_line_secs.begin(), two_line_secs.end(), sec::SecComparator{});
     EXPECT_EQ(two_line_secs, two_line_secs_correct);
-    std::sort(two_line_secs.begin(), two_line_secs.end(), SecComparator{});
+    std::sort(two_line_secs.begin(), two_line_secs.end(), sec::SecComparator{});
     EXPECT_EQ(two_line_secs, two_line_secs_correct);
 }
 
 
 TEST_F(IoControllerTest, SecSortWholeFileTest) {
-    std::sort(secs_.begin(), secs_.end(), SecComparator{});
+    std::sort(secs_.begin(), secs_.end(), sec::SecComparator{});
     io_ctl_.WriteSecToFile(tst::kTestOutputSchFile, secs_);
     EXPECT_TRUE(tst_util::CompareFiles(tst::kTestOutputSchFile, tst::kTestCorrectSortedOutputSchFile));
+}
+
+TEST_F(IoControllerTest, AlphaNumericTranslateTest) {
+    EXPECT_EQ(9327, secs_[0].GetEqpCd());
+    EXPECT_EQ(9336, secs_[4].GetEqpCd());
 }

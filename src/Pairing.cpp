@@ -11,10 +11,10 @@ std::uint8_t Pairing::size() const {
     return duties_.size();
 }
 
-Duty& Pairing::operator[](std::uint8_t idx) {
+duty::Duty& Pairing::operator[](std::uint8_t idx) {
     return duties_[idx];
 }
 
-Duty Pairing::operator[](std::uint8_t idx) const {
+duty::Duty Pairing::operator[](std::uint8_t idx) const {
     return duties_[idx];
 }

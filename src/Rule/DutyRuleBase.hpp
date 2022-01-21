@@ -11,10 +11,10 @@
 #include "Duty.hpp"
 #include "RuleBase.hpp"
 
-class DutyRuleBase : public RuleBase {
+class DutyRuleBase : public RuleBase<duty::Duty> {
     
 protected:
-    const Duty& duty;
+    const duty::Duty& duty;
 };
 
 #endif /* DutyRuleBase_hpp */

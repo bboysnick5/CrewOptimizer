@@ -11,7 +11,6 @@
 #include "Definition.hpp"
 
 
-
 struct Airport {
     
     bool operator == (const Airport& other) const {
@@ -23,10 +22,9 @@ struct Airport {
     }
     
     std::array<char, 3> arp_cd;
-    chr::DurationMins utc_offset_duration;
+    chr::DurationMins4B utc_offset_duration;
 
 };
-
 
 
 struct ArpComparator {
@@ -50,7 +48,7 @@ struct ArpComparator {
         return false;
     }
     
-    constexpr static chr::DurationMins kDefaultBaseUtcOffset{480};
+    constexpr static chr::DurationMins4B kDefaultBaseUtcOffset{480};
     constexpr static Airport kDefaultBaseArp{{'P', 'E', 'K'}, kDefaultBaseUtcOffset};
     
     Airport main_base_;

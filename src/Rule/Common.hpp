@@ -13,7 +13,16 @@
 
 namespace rule {
 
-template <typename Rep, class Period>
+enum class RuleDataType {
+    
+};
+
+template <class K, class V>
+class RuleEssense {
+    
+};
+
+template <class Rep, class Period>
 bool WithinDuration(chr::Duration<Rep, Period> dur, chr::Duration<Rep, Period> min, chr::Duration<Rep, Period> max, bool &early_stop) {
     if (dur > max) {
         early_stop = true;
@@ -22,7 +31,7 @@ bool WithinDuration(chr::Duration<Rep, Period> dur, chr::Duration<Rep, Period> m
     return min < dur;
 }
 
-template <typename Rep, class Period>
+template <class Rep, class Period>
 bool LessThanDuration(chr::Duration<Rep, Period> dur, chr::Duration<Rep, Period> max, bool &early_stop) {
     return dur < max;
 }

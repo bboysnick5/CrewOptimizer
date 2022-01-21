@@ -15,14 +15,16 @@
 
 class Pairing {
 public:
-    Duty& operator[](std::uint8_t idx);
-    Duty operator[](std::uint8_t idx) const;
+    using ContainedType = duty::Duty;
+    
+    duty::Duty& operator[](std::uint8_t idx);
+    duty::Duty operator[](std::uint8_t idx) const;
     std::uint8_t size() const;
     
 private:
-    chr::DurationMins prg_time_;
+    chr::DurationMins4B prg_time_;
     std::uint32_t prg_no_;
-    std::vector<Duty> duties_;
+    std::vector<duty::Duty> duties_;
     Airport base_;
 };
 

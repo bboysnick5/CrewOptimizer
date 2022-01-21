@@ -33,7 +33,7 @@ enum class CCRank : std::uint8_t {
 enum class AMRank : std::uint8_t {
     kAMCF,
     kAMSF,
-    kAMST，
+    kAMST
 };
 
 class Complement {

@@ -13,19 +13,20 @@
 #include <string_view>
 #include <vector>
 
+#include "Definition.hpp"
 #include "Parser.hpp"
 #include "Sector.hpp"
 
 
 class IoController {
 public:
-    std::vector<Sector> ParseSchFileStoreSecStrs(std::string_view sch_file_name);
-    void WriteSecToFile(std::string_view sol_file_name, std::span<const Sector> secs);
+    std::vector<sec::Sector> ParseSchFileStoreSecStrs(std::string_view sch_file_name);
+    void WriteSecToFile(std::string_view sol_file_name, std::span<const sec::Sector> secs);
 
 private:
     static constexpr std::uint16_t kDefaultReserveSecs = 2048;
     
-    Parser parser_{};
+    Parser<ser::SecField> sec_parser_{};
     std::vector<std::string> sec_strs_{};
 };
 

@@ -22,7 +22,7 @@
 
 namespace util {
 
-template <typename Enum>
+template <class Enum>
 constexpr std::underlying_type_t<Enum> to_underlying(Enum e) noexcept {
     return static_cast<std::underlying_type_t<Enum>>(e);
 }
@@ -35,19 +35,19 @@ template <class T, std::size_t N>
 inline constexpr bool is_array_v = is_array<std::array<T, N>>::value;
 
 
-template <typename Clock>
+template <class Clock>
 struct is_chrono_time_point : std::false_type {};
-template <typename Clock>
+template <class Clock>
 struct is_chrono_time_point<std::chrono::time_point<Clock>>:std::true_type{};
-template <typename Clock>
+template <class Clock>
 inline constexpr bool is_chrono_time_point_v = is_chrono_time_point<Clock>::value;
 
 
-template <typename T>
+template <class T>
 struct is_chrono_duration : std::false_type {};
-template <typename R, typename P>
+template <class R, class P>
 struct is_chrono_duration<std::chrono::duration<R, P>> : std::true_type {};
-template <typename R, typename P>
+template <class R, class P>
 inline constexpr bool is_chrono_duration_v = is_chrono_duration<std::chrono::duration<R, P>>::value;
 
 template <class Rep1, class Period1, class Rep2, class Period2, class Rep3, class Period3>

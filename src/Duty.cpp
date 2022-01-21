@@ -6,3 +6,11 @@
 //
 
 #include "Duty.hpp"
+
+namespace duty {
+
+const sec::Sector& Duty::operator[](std::uint8_t idx) const {
+    return sectors_[idx];
+}
+
+}

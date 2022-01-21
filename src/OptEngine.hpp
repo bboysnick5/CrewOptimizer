@@ -21,7 +21,7 @@ class OptEngine {
     
     
     
-    OptEngine(std::span<const Sector> input_sectors);
+    OptEngine(std::span<const sec::Sector> input_sectors);
     
     void optimize();
     
@@ -29,9 +29,9 @@ private:
     
     void EnumDuties();
     
-    const std::span<const Sector> input_sectors_;
-    std::vector<Duty> duty_pool_;
-    std::span<const Sector> leftover_sectors_;
+    const std::span<const sec::Sector> input_sectors_;
+    std::vector<duty::Duty> duty_pool_;
+    std::span<const sec::Sector> leftover_sectors_;
     Solution sol_;
 };
 

@@ -7,7 +7,7 @@
 
 #include "OptEngine.hpp"
 
-OptEngine::OptEngine(std::span<const Sector> input_sectors) :
+OptEngine::OptEngine(std::span<const sec::Sector> input_sectors) :
 input_sectors_(input_sectors), leftover_sectors_(input_sectors), sol_{} {}
 
 void OptEngine::optimize() {
