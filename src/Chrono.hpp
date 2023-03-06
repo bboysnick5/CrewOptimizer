@@ -15,14 +15,16 @@
 
 namespace chr {
 
-using DurationMins4B = std::chrono::duration<std::int32_t, std::ratio<60>>;
-using DurationHours4B = std::chrono::duration<std::int32_t,
-                                              std::ratio_multiply<std::ratio<60>, DurationMins4B::period>>;
-using DurationDays4B = std::chrono::duration<std::int32_t,
-                                             std::ratio_multiply<std::ratio<24>, DurationHours4B::period>>;
+using ChronoRep = std::int32_t;
 
-using TpMinsUnixEpoch4B = std::chrono::time_point<std::chrono::system_clock, DurationMins4B>;
-using TpDaysUnixEpoch4B = std::chrono::time_point<std::chrono::system_clock, DurationDays4B>;
+using DurationMins = std::chrono::duration<ChronoRep, std::ratio<60>>;
+using DurationHours = std::chrono::duration<ChronoRep,
+                                              std::ratio_multiply<std::ratio<60>, DurationMins::period>>;
+using DurationDays = std::chrono::duration<ChronoRep,
+                                             std::ratio_multiply<std::ratio<24>, DurationHours::period>>;
+
+using TpMinsUnixEpoch = std::chrono::time_point<std::chrono::system_clock, DurationMins>;
+using TpDaysUnixEpoch = std::chrono::time_point<std::chrono::system_clock, DurationDays>;
 
 
 

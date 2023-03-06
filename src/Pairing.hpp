@@ -12,22 +12,19 @@
 
 #include "Duty.hpp"
 
-
 class Pairing {
-public:
+   public:
     using ContainedType = duty::Duty;
-    
+
     duty::Duty& operator[](std::uint8_t idx);
     duty::Duty operator[](std::uint8_t idx) const;
     std::uint8_t size() const;
-    
-private:
-    chr::DurationMins4B prg_time_;
+
+   private:
+    chr::DurationMins prg_time_;
     std::uint32_t prg_no_;
     std::vector<duty::Duty> duties_;
-    Airport base_;
+    arp::Airport base_;
 };
-
-
 
 #endif /* Pairing_hpp */

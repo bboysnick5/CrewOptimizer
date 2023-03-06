@@ -9,54 +9,60 @@
 #define Airport_hpp
 
 #include "Definition.hpp"
+#include "file/FieldFormat.hpp"
+#include "file/Parser.hpp"
 
+namespace arp {
+
+using ArpCdType = std::uint16_t;
+using UtcOffsetDurType = chr::DurationMins;
 
 struct Airport {
-    
-    bool operator == (const Airport& other) const {
+    // constexpr Airport(auto&& arp_cd_arg, auto&& utc_offset_arg)
+    //   : arp_cd(arp_cd_arg), utc_offset_duration(utc_offset_arg) {}
+
+    constexpr bool operator==(const Airport& other) const {
         return !(*this != other);
     }
-    
-    bool operator != (const Airport& other) const {
+
+    constexpr bool operator!=(const Airport& other) const {
         return arp_cd != other.arp_cd;
     }
-    
-    std::array<char, 3> arp_cd;
-    chr::DurationMins4B utc_offset_duration;
 
+    ArpCdType arp_cd;
+    UtcOffsetDurType utc_offset_duration;
 };
 
-
 struct ArpComparator {
-    
-    ArpComparator(Airport main_base = kDefaultBaseArp) : main_base_(main_base) {}
-    
-    bool operator() (const Airport &a, const Airport &b) const {
-        const auto a_timezone_diff_with_base = chr::abs(main_base_.utc_offset_duration - a.utc_offset_duration);
-        const auto b_timezone_diff_with_base = chr::abs(main_base_.utc_offset_duration - b.utc_offset_duration);
-        if (a_timezone_diff_with_base < b_timezone_diff_with_base)
-            return true;
-        if (a_timezone_diff_with_base > b_timezone_diff_with_base)
-            return false;
+    ArpComparator(Airport main_base = kDefaultBaseArp)
+        : main_base_(main_base) {}
+
+    bool operator()(const Airport& a, const Airport& b) const {
+        const auto a_timezone_diff_with_base =
+            chr::abs(main_base_.utc_offset_duration - a.utc_offset_duration);
+        const auto b_timezone_diff_with_base =
+            chr::abs(main_base_.utc_offset_duration - b.utc_offset_duration);
+        if (a_timezone_diff_with_base < b_timezone_diff_with_base) return true;
+        if (a_timezone_diff_with_base > b_timezone_diff_with_base) return false;
         if (a != b) {
-            if (a == main_base_)
-                return true;
-            if (b == main_base_)
-                return false;
+            if (a == main_base_) return true;
+            if (b == main_base_) return false;
             return a.arp_cd < b.arp_cd;
         }
         return false;
     }
-    
-    constexpr static chr::DurationMins4B kDefaultBaseUtcOffset{480};
-    constexpr static Airport kDefaultBaseArp{{'P', 'E', 'K'}, kDefaultBaseUtcOffset};
-    
+
+    constexpr static chr::DurationMins kDefaultBaseUtcOffset{480};
+    constexpr static Airport kDefaultBaseArp = {
+        *file::parser::ParseTokenDirect<
+            ArpCdType, file::FieldFormat{0, 3, file::kEmptyFormat},
+            file::parser::Pattern::kConvertAlnumToUint>(
+            std::string_view("PEK")),
+        kDefaultBaseUtcOffset};
+
     Airport main_base_;
 };
 
-
-
-
-
+}  // namespace arp
 
 #endif /* Airport_hpp */

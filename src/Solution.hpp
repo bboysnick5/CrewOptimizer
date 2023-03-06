@@ -13,7 +13,7 @@
 #include "Pairing.hpp"
 
 class Solution {
-    Airport base;
+    arp::Airport base;
     std::vector<Pairing> prgs;
 };
 

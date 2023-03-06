@@ -22,10 +22,10 @@ std::vector<sec::Sector> IoController::ParseSchFileStoreSecStrs(std::string_view
     secs.reserve(kDefaultReserveSecs);
     sec_strs_.reserve(kDefaultReserveSecs);
     std::string line_str;
-    ser::SecSvIdxType sec_sv_idx = 0;
+    file::SecSvIdxType sec_sv_idx = 0;
     while (std::getline(sch_fs, line_str)) {
         sec_parser_.SetCurLineToParseSecSvIdx(line_str, sec_sv_idx++);
-        sec_strs_.push_back(line_str);
+        sec_strs_.push_back(std::move(line_str));
         secs.emplace_back(sec_parser_);
     }
     sec_strs_.shrink_to_fit();

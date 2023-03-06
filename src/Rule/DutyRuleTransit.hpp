@@ -39,7 +39,7 @@ private:
     
 
     
-    using ConnectTypeDurationMapArr = std::array<chr::DurationMins4B, magic_enum::enum_count<sec::OprType>()>;
+    using ConnectTypeDurationMapArr = std::array<chr::DurationMins, magic_enum::enum_count<sec::OprType>()>;
     /*
     struct CharArrConnectTypeDurationMapPair {
         std::array<>

@@ -1,0 +1,52 @@
+[
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/Airport.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/Airport.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/Airport.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/Chrono.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/Chrono.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/Chrono.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/Complement.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/Complement.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/Complement.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/Definition.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/Definition.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/Definition.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/Duty.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/Duty.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/Duty.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/OptEngine.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/OptEngine.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/OptEngine.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/Pairing.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/Pairing.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/Pairing.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/Solution.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/Solution.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/Solution.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/Utility.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/Utility.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/Utility.cpp"
+},
+{
+  "directory": "/Users/yunlongliu/Desktop/CrewOptimizer/build",
+  "command": "/usr/local/opt/llvm@14/bin/clang++ -I/Users/yunlongliu/Desktop/CrewOptimizer/src -I/usr/local/Cellar/jemalloc/5.2.1_1/include -isystem /usr/local/include -isystem /Users/yunlongliu/vcpkg/installed/x64-osx/include -g -Wunused -std=gnu++20 -o CMakeFiles/CrewOptimizer.dir/src/main.cpp.o -c /Users/yunlongliu/Desktop/CrewOptimizer/src/main.cpp",
+  "file": "/Users/yunlongliu/Desktop/CrewOptimizer/src/main.cpp"
+}
+]

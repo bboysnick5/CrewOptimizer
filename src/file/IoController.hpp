@@ -15,21 +15,19 @@
 
 #include "Definition.hpp"
 #include "Parser.hpp"
-#include "Sector.hpp"
-
+#include "Sector/Sector.hpp"
 
 class IoController {
-public:
-    std::vector<sec::Sector> ParseSchFileStoreSecStrs(std::string_view sch_file_name);
-    void WriteSecToFile(std::string_view sol_file_name, std::span<const sec::Sector> secs);
+   public:
+    std::vector<sec::Sector> ParseSchFileStoreSecStrs(
+        std::string_view sch_file_name);
+    void WriteSecToFile(std::string_view sol_file_name,
+                        std::span<const sec::Sector> secs);
 
-private:
+   private:
     static constexpr std::uint16_t kDefaultReserveSecs = 2048;
-    
-    Parser<ser::SecField> sec_parser_{};
-    std::vector<std::string> sec_strs_{};
+
+    std::vector<std::string_view> sec_strs_{};
 };
-
-
 
 #endif /* IoController_hpp */
